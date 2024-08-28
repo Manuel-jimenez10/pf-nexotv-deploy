@@ -12,13 +12,9 @@ async function bootstrap() {
   );
 app.enableCors({
     origin: ['https://nexo-tv.vercel.app','http://localhost:3000'],
-    allowedHeaders: [
-      'Accept',
-      'Authorization',
-      'Content-Type',
-      'X-Requested-With',
-      'apollo-require-preflight',
-    ],
+    allowedHeaders: 'Content-Type, Accept',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
   });
   await app.listen(3000);
 }
