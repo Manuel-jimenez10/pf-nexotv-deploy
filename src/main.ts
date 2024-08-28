@@ -12,7 +12,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: 'https://nexo-tv.vercel.app/', // La URL de tu frontend
+    origin: 'https://nexo-tv.vercel.app', // La URL de tu frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
