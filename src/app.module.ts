@@ -21,7 +21,7 @@ import { SeedModule } from './seed/seed.module';
       driver: ApolloDriver,
       playground: true,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      //plugins: [ApolloServerPluginLandingPageLocalDefault()],
       introspection: true,
     }),
     TypeOrmModule.forRoot({
