@@ -13,8 +13,7 @@ import { SubscriptionModule } from './subscription/subscription.module';
 import { ContentModule } from './content/content.module';
 import { AuthModule } from './auth/auth.module';
 import { SeedModule } from './seed/seed.module';
-import { FilesModule } from './files/files.module';
- 
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -42,7 +41,6 @@ import { FilesModule } from './files/files.module';
     ContentModule,
     AuthModule,
     SeedModule,
-    FilesModule,
   ],
   controllers: [],
   providers: [],
