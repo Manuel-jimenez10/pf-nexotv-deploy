@@ -23,7 +23,11 @@ import { SeedModule } from './seed/seed.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       //plugins: [ApolloServerPluginLandingPageLocalDefault()],
       introspection: true,
-    }),
+    cors: {
+    origin: ['https://nexo-tv.vercel.app', 'http://localhost:3000', 'http://localhost:3001'], 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  }}),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST,
