@@ -10,7 +10,7 @@ import { CurrentUser } from 'src/auth/decorator/current-user.decorator';
 import { ValidRoles } from 'src/auth/enums/valid-roles.emun';
 
 @Resolver(() => Content)
-@UseGuards(JwtAuthGuard)
+//@UseGuards(JwtAuthGuard)
 export class ContentResolver {
   constructor(private readonly contentService: ContentService) {}
 
