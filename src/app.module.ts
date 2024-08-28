@@ -13,7 +13,8 @@ import { SubscriptionModule } from './subscription/subscription.module';
 import { ContentModule } from './content/content.module';
 import { AuthModule } from './auth/auth.module';
 import { SeedModule } from './seed/seed.module';
-
+import { FilesModule } from './files/files.module';
+ 
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -22,7 +23,6 @@ import { SeedModule } from './seed/seed.module';
       playground: false,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      introspection: true,
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -42,6 +42,7 @@ import { SeedModule } from './seed/seed.module';
     ContentModule,
     AuthModule,
     SeedModule,
+    FilesModule,
   ],
   controllers: [],
   providers: [],
