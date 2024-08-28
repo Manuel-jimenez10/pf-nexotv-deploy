@@ -19,10 +19,11 @@ import { SeedModule } from './seed/seed.module';
     ConfigModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      playground: false,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      introspection: true,}),
+     // playground: false,
+      //autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+     // plugins: [ApolloServerPluginLandingPageLocalDefault()],
+     // introspection: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST,
